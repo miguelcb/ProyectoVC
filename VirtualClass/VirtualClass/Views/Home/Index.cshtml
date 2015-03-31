@@ -1,31 +1,238 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="contenedor-principal" style="margin-top:100px;">
+    <script src="~/Scripts/Chart.js"></script>
+    <br />
+    <div class="container ">
+        <div clarr="row">
+            <div class="col-sm-3">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingCalendario">
+                        <div class="row">
+                            <div class="col-xs-12">
+
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseCalendario" aria-expanded="true" aria-controls="collapseCalendario">
+                                    <strong>Calendario</strong>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="collapseCalendario" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingCalendario">
+                        <div class="panel-body" style="padding: 10px 5px 10px 5px;">
+                            <div style="background-color:rgb(240, 240, 240);padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hoy</strong><br />
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">16:00</strong><br />
+                                <span>&nbsp;UTP - Matemáticas I</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">18:00</strong><br />
+                                <span>&nbsp;UTP - Sociología</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="background-color:rgb(240, 240, 240);padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">02/04/2015</strong><br />
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">14:30</strong><br />
+                                <span>&nbsp;UTP - Práctica de Psicología I</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">17:00</strong><br />
+                                <span>&nbsp;UTP - Matemáticas I</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingCorreo">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseCorreo" aria-expanded="true" aria-controls="collapseCorreo">
+                                    <strong>Correo</strong>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="#">Nuevos <span class="badge">5</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseCorreo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingCorreo">
+                        <div class="panel-body" style="padding: 10px 5px 10px 5px;">
+                            <div style="background-color:rgb(240, 240, 240);padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hace 5 minutos</strong><br />
+                                <span><strong>&nbsp;Su pedido esta listo</strong></span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="background-color:rgb(240, 240, 240);padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hace 30 minutos</strong><br />
+                                <span><strong>&nbsp;Los cuadernos han llegado</strong></span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <span style="font-size:smaller">Hace 4 horas</span><br />
+                                <span>&nbsp; Examen suspendido por clim...</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <span style="font-size:smaller">15/02/2015 13:56</span><br />
+                                <span>&nbsp; Libro ya se encuentra en st...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading" role="tab" id="headingOneDrive">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOneDrive" aria-expanded="true" aria-controls="collapseOneDrive">
+                                    <strong>OneDrive</strong>
+                                </a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="#">Nuevos <span class="badge">1</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="collapseOneDrive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOneDrive">
+                        <div class="panel-body" style="padding: 10px 5px 10px 5px;">
+                            <div style="background-color:rgb(240, 240, 240);padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hace 15 minutos</strong><br />
+                                <strong style="font-size:smaller">\Matemáticas 1\Examenes\Julio</strong><br />
+                                <span><strong>&nbsp;Pre-Examen.docx</strong></span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hace 7 horas</strong><br />
+                                <strong style="font-size:smaller">\História II\Material de Estudio\Pre...</strong><br />
+                                <span>&nbsp;Libertador San Martin.pptx</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">Hace 22 horas</strong><br />
+                                <strong style="font-size:smaller">\História II\Material de Estudio\Doc...</strong><br />
+                                <span>&nbsp; Tupac Amaru II - Rebelión.docx</span>
+                            </div>
+                            <hr style="margin: 4px 0px 4px 0px;" />
+                            <div style="padding: 0px 5px 0px 5px;">
+                                <strong style="font-size:smaller">22/03/2015 13:56</strong><br />
+                                <strong style="font-size:smaller">\Normativa Interna\Solicitudes\Recat...</strong><br />
+                                <span>&nbsp; Proceso de Recategorizacion...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>¡Pago atrasado! </strong>Tienes 2 mensualidades atrasadas ...
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p>Carrera: <strong>Ingeniería de Sistemas</strong></p>
+                        <p>
+                            Ciclo: <strong>6</strong>
+                        </p>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-6">
+                                
+                                <div class="alert alert-warning" role="alert">Asistencia general: <strong>75%</strong></div>
+                                <canvas id="myChart" height="300"></canvas>
+                                <script>
+                                    var data = {
+                                        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"],
+                                        datasets: [
+                                            {
+                                                label: "My First dataset",
+                                                fillColor: "rgba(220,220,220,0.5)",
+                                                strokeColor: "rgba(220,220,220,0.8)",
+                                                highlightFill: "rgba(220,220,220,0.75)",
+                                                highlightStroke: "rgba(220,220,220,1)",
+                                                data: [65, 59, 80, 81, 56, 55, 40]
+                                            }
+                                        ]
+                                    };
+
+
+                                    var ctx = document.getElementById("myChart").getContext("2d");
+                                    var myBarChart = new Chart(ctx).Bar(data);
+
+                                </script>
+                                <div class="alert alert-success" role="alert">Créditos Totales: <strong>254</strong></div>
+                                <div class="alert alert-success" role="alert">Créditos del Ciclo: <strong>60</strong></div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h5><strong>Cursos del Ciclo</strong></h5>
+                                        </td>
+                                        <td>
+                                            <h5><strong>Promedio actual</strong></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Historia II
+                                        </td>
+                                        <td style="text-align:right;">13.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Programación Estructurada
+                                        </td>
+                                        <td style="text-align:right;">15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Administración I
+                                        </td>
+                                        <td style="text-align:right;">15.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Matemática II
+                                        </td>
+                                        <td style="text-align:right;">13.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Psicología
+                                        </td>
+                                        <td style="text-align:right;">17.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Administración de Proyectos
+                                        </td>
+                                        <td style="text-align:right;">16.00</td>
+                                    </tr>
+                                </table>
+                                <hr />
+                                <img src="~/img/banneremp.jpg" style="width:100%;border:solid;border-color:lightgray;border-width:1px;border-radius: 6px 6px 6px 6px;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

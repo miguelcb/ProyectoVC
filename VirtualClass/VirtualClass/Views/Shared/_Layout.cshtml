@@ -3,13 +3,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Intranet UTP</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body class="cuerpo-zona-alumno">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <table style="width:100%;">
+                <tr>
+                    <td>
+                        <img src="~/img/LogoUTP2.png" class="logo-utp1" />
+                    </td>
+                    <td style="width:100%;text-align:right;padding-right:10px;padding-top:5px;">
+                        
+                        <strong>Moy Padilla</strong>
+                        <br />
+                        Stefany Marylia Milagros
+                        <br />
+                        Cod: 1928182
+                    </td>
+                    <td style="width:100%;text-align:right;">
+                        <img src="~/img/morilia.jpg" class="foto-utp1" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,25 +38,80 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Académico <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Mi Horario", "MiHorario", "Academico")</li>
+                            <li>@Html.ActionLink("Mis Asignaturas", "MisAsignaturas", "Academico")</li>
+                            <li>@Html.ActionLink("Extensión Profesional", "ExtensionProfesional", "Academico")</li>
+                            <li>@Html.ActionLink("Mis Calificaciones", "MisCalificaciones", "Academico")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Cambiar Clave", "CambiarClave", "Academico")</li>
+                            <li>@Html.ActionLink("Record Académico", "RecordAcademico", "Academico")</li>
+                            <li>@Html.ActionLink("Plana Docente", "PlanaDocente", "Academico")</li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Administrativo <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Mis Pendientes", "MiHorario", "Academico")</li>
+                            <li>@Html.ActionLink("Mis Pagos", "MisAsignaturas", "Academico")</li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            Servicios <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Biblioteca Virtual", "MiHorario", "Academico")</li>
+                            <li>@Html.ActionLink("Empleabilidad", "MisAsignaturas", "Academico")</li>
+                        </ul>
+                    </li>
+
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Ayuda", "Index", "Ayuda")</li>
+                        <li>@Html.ActionLink("Salir", "Salir", "Home")</li>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+
+    @RenderBody()
+
+    <footer style="background-color:rgb(131, 131, 129);">
+        <div class="container body-content">
+            <br />
+            <div class="container">
+                <p style="text-align:center;color:white;font-size:16px;">
+                    Universidad Tecnológica del Perú
+                </p>
+
+                <p style="text-align:center;color:white;font-size:10px;">
+                    Mesa de Ayuda: Teléfono 01 315-9606 | <a href="http://mesadeayuda.utp.edu.pe" style="color:white;">mesadeayuda.utp.edu.pe</a>
+                </p>
+                <p style="text-align:center;color:white;font-size:14px;">
+                    Copyright © 2015 Universidad Tecnológica del Perú
+                    | <a href="@Url.Action("PoliticasDePrivacidad", "Home")" style="color:white;">Política de Privacidad</a>
+                    | <a href="@Url.Action("TerminosDeUso", "Home")" style="color:white;">Términos de Uso</a>
+                    | <a href="@Url.Action("FAQ", "Home")" style="color:white;">FAQ</a>
+                    | <a href=@Url.Action("Contacto", "Home", "Home") style="color:white;">Contáctenos</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

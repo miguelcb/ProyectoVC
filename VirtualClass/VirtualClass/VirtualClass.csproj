@@ -176,7 +176,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\3OF9_NEW.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\GothamRnd-Bold.svg" />
+    <Content Include="fonts\GothamRnd-Book.svg" />
+    <Content Include="fonts\GothamRnd-Light.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -185,10 +189,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="fonts\GothamRnd-Book.eot" />
+    <Content Include="fonts\GothamRnd-Book.ttf" />
+    <Content Include="fonts\GothamRnd-Book.woff" />
+    <Content Include="fonts\3OF9_NEW.eot" />
+    <Content Include="fonts\3OF9_NEW.TTF" />
+    <Content Include="fonts\3OF9_NEW.woff" />
+    <Content Include="fonts\GothamRnd-Bold.eot" />
+    <Content Include="fonts\GothamRnd-Bold.ttf" />
+    <Content Include="fonts\GothamRnd-Bold.woff" />
+    <Content Include="fonts\GothamRnd-Light.eot" />
+    <Content Include="fonts\GothamRnd-Light.ttf" />
+    <Content Include="fonts\GothamRnd-Light.woff" />
+    <None Include="Properties\PublishProfiles\VirtualClassV1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Icon.png" />
+    <Content Include="img\banneremp.jpg" />
+    <Content Include="img\LogoUTP2.png" />
+    <Content Include="img\morilia.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -239,6 +260,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Academico\" />
+    <Folder Include="Views\Administrativo\" />
+    <Folder Include="Views\Ayuda\" />
+    <Folder Include="Views\Servicios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
